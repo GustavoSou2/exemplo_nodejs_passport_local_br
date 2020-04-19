@@ -15,5 +15,5 @@ const user = connection.define('users', {
     timestamps: false
 })
 
-//user.sync({force:true}).then(()=>{}) // após a primeira execução comente essa linha
+user.sync({force:true}).then(()=>{}) // após a primeira execução comente essa linha
 module.exports = user

@@ -12,14 +12,14 @@ Para você conseguir entender as configurações precisará ler * [Passportjs](h
 > Nodejs
 > npm
 > express
-> Body-parser
+> Body-parser 
 > sequelize
 > Ejs
 > nodemon
 
 ### Instalação
 
-Em um terminal de uma máquina com git instalado execute: git clone https://github.com/andremartds/exemplo_nodejs_passport_local_br.git
+Em um terminal de uma máquina com git instalado execute: git clone git@github.com:andremartds/exemplo_nodejs_passport_local_br.git
 
 ```
 npm install
@@ -37,8 +37,8 @@ nodemon
 
 ### Estrutura
 
-<p> public/ onde se encontra e poderá colocar arquivos estáticos </p>
-<p> src/ onde se encontram controler, model e middleware </p>
+<p> public/ onde se encontram os arquivos estáticos </p>
+<p> src/ onde se encontra controler, model e middleware </p>
 <p> views/ views do ejs </p>
 <p> index.js/ arquivo de entrada </p>
 
