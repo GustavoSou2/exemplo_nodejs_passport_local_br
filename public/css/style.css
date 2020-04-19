@@ -1,0 +1,9 @@
+body {
+    background-color: azure;
+}
+.space-top {
+    margin-top: 10px;
+}
+input, button, a {
+    margin-top:5px;
+}

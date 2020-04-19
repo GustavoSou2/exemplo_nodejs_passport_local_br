@@ -1,0 +1,47 @@
+<%- include('../../templates/header.ejs') %>
+
+<body>
+    <%- include('../../templates/nav.ejs') %>
+    <div class="container">
+        <a href="/create-user" class="btn btn-success">Criar Usuário</a>
+        <hr>
+        Lista de Usuários
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#ID</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user=>{ %>
+                    <tr>
+                        <td><%= user.id %> </td>
+                        <td><%= user.email %> </td>
+                        <td> 
+                            
+                            <a href="/user/edit/<%= user.id %>">Editar</a>
+
+                            <form action="/delete/user" method="POST" style="display: inline;" onsubmit="deleteConfirm(event, this)">
+                                <input type="hidden" name="id" value="<%= user.id %>">
+                                <button type="submit" class="btn btn-danger">Excluir</button> 
+                            </form>
+                            
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <%- include('../../templates/scripts.ejs') %>
+
+    <script>
+        function deleteConfirm(event, form) {
+            event.preventDefault()
+            const confirmed = confirm("Deseja deletar");
+            if(confirmed) {
+                form.submit()
+            }
+        }
+    </script>
